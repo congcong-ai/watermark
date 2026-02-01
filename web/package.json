@@ -1,0 +1,28 @@
+{
+  "name": "watermark-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "dev:kill": "bash -lc 'PID=$(lsof -ti:3000 || true); if [ -n \"$PID\" ]; then kill -9 $PID; fi; next dev -p 3000'",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "start:kill": "bash -lc 'PID=$(lsof -ti:3000 || true); if [ -n \"$PID\" ]; then kill -9 $PID; fi; next start -p 3000'"
+  },
+  "dependencies": {
+    "jszip": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
